@@ -3,9 +3,7 @@ Command Line interface that displays relevant information for various cryptocurr
 <br>
 How to Use:
 <ol>
-<li> Clone the repository ```
-  git clone https://github.com/sliriano/precious_metals_and_crypto_models.git
-  ```</li>
+<li> Clone the repository <code>git clone https://github.com/sliriano/precious_metals_and_crypto_models.git</code></li> 
 <li>Change into the directory ```cd precious_metals_and_crypto_models```</li>
 <li>Install the package requirements ```pip3 install -r requirements.txt```</li>
 <li>Run main ```python3 __main__.py```</li>
