@@ -1,6 +1,6 @@
 # precious_metals_and_crypto_models
 Command Line interface that displays relevant information for various cryptocurrencies and precious metals.
-<br>
+<br><br>
 How to Use:
 <ol>
 <li> Clone the repository <code>git clone https://github.com/sliriano/precious_metals_and_crypto_models.git</code></li> 
