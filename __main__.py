@@ -5,10 +5,10 @@ def display_single_chart():
     chart = input("Which chart would you like to see? b = bitcoin, e = ethereum, g = gold, s = silver\n").lower()
     
     if chart == "b":
-        supply = input("Would you like to see the bitcoin current supply chart as well? y for yes, n for no")
-        if supply.lower() == "n":
+        supply = input("Would you like to see the bitcoin current supply chart as well? y for yes, n for no").lower()
+        if supply == "n":
             btc_price_chart()
-        elif supply.lower() == "y":
+        elif supply == "y":
             btc_price_chart()
             btc_supply_chart()
         else:
@@ -30,7 +30,7 @@ def display_single_chart():
 
 # displays multiple price charts
 def display_price_charts():
-    charts = input("Which charts would you like to see? enter a comma separated list. Ex) bitcoin,ethereum,gold,silver\n")
+    charts = input("Which charts would you like to see? enter a comma separated list. Ex) bitcoin,ethereum,gold,silver\n").lower()
     # removes whitespace
     charts = charts.replace(" ", "")
     # splits the string into a list
@@ -39,16 +39,16 @@ def display_price_charts():
     # loops through and builds the plot 
     print(charts)
     for chart_num in range(0, len(charts)):
-        if charts[chart_num].lower() == "bitcoin":
+        if charts[chart_num]== "bitcoin":
             btc_price_chart(chart_num+1,num_of_charts)    
         
-        elif charts[chart_num].lower() == "ethereum":
+        elif charts[chart_num] == "ethereum":
             eth_price_chart(chart_num+1,num_of_charts)
         
-        elif charts[chart_num].lower() == "gold":
+        elif charts[chart_num] == "gold":
             gold_price_chart(chart_num+1, num_of_charts)
         
-        elif charts[chart_num].lower() == "silver":
+        elif charts[chart_num] == "silver":
             silver_price_chart(chart_num+1, num_of_charts)
         
         else:

@@ -28,6 +28,10 @@ def btc_supply_chart(plt_num=1, num_of_charts=1):
     plt.xlabel("Year")
     plt.title("Bitcoin Supply Chart Price Chart")
 
+def btc_projected_supply_chart():
+    #TODO
+    pass
+
 def eth_price_chart(plt_num=1, num_of_charts=1):
     eth_data = quandl.get("GDAX/ETH_USD", authtoken="_5hJPZAh3B_8J8HzfT8s")
     plt.subplot(1,num_of_charts,plt_num)
@@ -51,3 +55,12 @@ def silver_price_chart(plt_num=1, num_of_charts=1):
     plt.ylabel("Price (USD)")
     plt.xlabel("Year")
     plt.title("Silver/USD Price Chart")
+
+# today argument should be a string in the following format: 2020-09-17
+# 2020-09-17 is the latest date that provides this information
+def latest_investor_sentiment(today):
+    sentiment_data = quandl.get('AAII/AAII_SENTIMENT', start_date=today, end_date=today, authtoken="_5hJPZAh3B_8J8HzfT8s")
+    print(sentiment_data)
+    # TODO take the first three columns of data (bullish, bearish, neutral) and create a pie chart or bar chart
+
+# latest_investor_sentiment("2020-09-17")
